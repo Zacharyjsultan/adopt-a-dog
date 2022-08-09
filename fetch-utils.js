@@ -8,7 +8,7 @@ export async function getDogs() {
     // from the dogs table, select all items
     // what is the dogs-list-container actually supposed to be?
     const resp = await client.from('dogs').select('*');
-    console.log('resp');
+    
 
     // and return the response
     return resp.data;
@@ -16,8 +16,8 @@ export async function getDogs() {
 
 export async function getDog(id) {
     // from the dogs table, select a single dog who has the matching id
-    const resp = await client.from('dogs').select('*').match({ id });
-    console.log('resp');
+    const resp = await client.from('dogs').select('*').match({ id }).single();
+    
     // and return the response
     return resp.data;
 }

@@ -11,7 +11,7 @@ async function loadData() {
     for (let dog of dogs) {
         const dogEl = renderDogCard(dog);
         dogListContainer.append(dogEl);
-}
+    }
 }
 // render and append all dog cards to the container
 loadData();
